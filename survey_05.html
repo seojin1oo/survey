@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>도시 안전 인식 조사 - 세트 05/10</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: sans-serif; background: #1a1f35; color: #fff; padding: 20px; }
+  .header { text-align: center; padding: 30px 20px; background: #0d1b3e; border-radius: 12px; margin-bottom: 24px; }
+  .header h1 { font-size: 28px; margin-bottom: 10px; }
+  .header p { color: #aaa; font-size: 14px; }
+  .badge { display: inline-block; background: #1e3a6e; color: #5b9bd5; padding: 6px 16px; border-radius: 20px; font-size: 13px; margin-bottom: 16px; }
+  .pair-card { background: #1e2540; border-radius: 12px; padding: 20px; margin-bottom: 24px; }
+  .pair-header { font-size: 13px; color: #aaa; margin-bottom: 12px; }
+  .photos { display: flex; gap: 12px; margin-bottom: 16px; }
+  .photo-box { flex: 1; position: relative; }
+  .photo-box img { width: 100%; border-radius: 8px; max-height: 220px; object-fit: cover; }
+  .label { position: absolute; top: 8px; left: 8px; background: rgba(0,0,0,0.6); color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
+  .questions { display: flex; flex-direction: column; gap: 14px; }
+  .question p { font-size: 14px; margin-bottom: 8px; color: #ddd; }
+  .options { display: flex; gap: 20px; }
+  .options label { display: flex; align-items: center; gap: 6px; cursor: pointer; font-size: 15px; background: #2a3050; padding: 10px 24px; border-radius: 8px; flex: 1; justify-content: center; }
+  .options label:hover { background: #3a4060; }
+  .scale { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .scale span { font-size: 12px; color: #aaa; }
+  .scale label { display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: pointer; font-size: 14px; }
+  .submit-btn { display: block; width: 100%; padding: 16px; background: #2563eb; color: #fff; border: none; border-radius: 10px; font-size: 16px; cursor: pointer; margin-top: 20px; }
+  .submit-btn:hover { background: #1d4ed8; }
+  @media (max-width: 600px) {
+    .photos { flex-direction: column; }
+    .options { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="badge">서울특별시</div>
+  <h1>도시 안전 인식 조사</h1>
+  <p>두 장소의 사진을 비교하여 안전 인식에 관한 질문에 답해주세요.<br>수집된 데이터는 연구 목적으로만 활용됩니다.</p>
+  <p style="margin-top:12px;color:#5b9bd5">세트 05 / 10 &nbsp;·&nbsp; 총 75문항</p>
+</div>
+<form id="survey-form">
+
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 1 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1BcnQODxkqIpyVl4QHgdX7d9T2MZyVck_" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=1EpOIOVdkP9sSsNSPpteV9epJS-99KkBE" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_1" value="A" required> A</label>
+                <label><input type="radio" name="q1_1" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_1" value="1" required>1</label><label><input type="radio" name="q2_1" value="2" required>2</label><label><input type="radio" name="q2_1" value="3" required>3</label><label><input type="radio" name="q2_1" value="4" required>4</label><label><input type="radio" name="q2_1" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_1" value="1" required>1</label><label><input type="radio" name="q3_1" value="2" required>2</label><label><input type="radio" name="q3_1" value="3" required>3</label><label><input type="radio" name="q3_1" value="4" required>4</label><label><input type="radio" name="q3_1" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 2 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1u_K7TZDxNWZRwjYLPfV9lHlnkrJQDTxI" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=1ZRwsla1Ut5VJzymBNhzPLiyTkIFo49GM" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_2" value="A" required> A</label>
+                <label><input type="radio" name="q1_2" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_2" value="1" required>1</label><label><input type="radio" name="q2_2" value="2" required>2</label><label><input type="radio" name="q2_2" value="3" required>3</label><label><input type="radio" name="q2_2" value="4" required>4</label><label><input type="radio" name="q2_2" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_2" value="1" required>1</label><label><input type="radio" name="q3_2" value="2" required>2</label><label><input type="radio" name="q3_2" value="3" required>3</label><label><input type="radio" name="q3_2" value="4" required>4</label><label><input type="radio" name="q3_2" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 3 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1ahwO-PirI3XDWtXp405__2QAcufqavPx" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=1sHpI2oqyvSTAO6sYp2tUTk0sxpo_xtt6" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_3" value="A" required> A</label>
+                <label><input type="radio" name="q1_3" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_3" value="1" required>1</label><label><input type="radio" name="q2_3" value="2" required>2</label><label><input type="radio" name="q2_3" value="3" required>3</label><label><input type="radio" name="q2_3" value="4" required>4</label><label><input type="radio" name="q2_3" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_3" value="1" required>1</label><label><input type="radio" name="q3_3" value="2" required>2</label><label><input type="radio" name="q3_3" value="3" required>3</label><label><input type="radio" name="q3_3" value="4" required>4</label><label><input type="radio" name="q3_3" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 4 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1WtDNregRj-SV_g2PUiNFZofx1uNSbLaR" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=1HnjsamSj9Endpf5KDmgxa54qmx4fdRM2" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_4" value="A" required> A</label>
+                <label><input type="radio" name="q1_4" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_4" value="1" required>1</label><label><input type="radio" name="q2_4" value="2" required>2</label><label><input type="radio" name="q2_4" value="3" required>3</label><label><input type="radio" name="q2_4" value="4" required>4</label><label><input type="radio" name="q2_4" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_4" value="1" required>1</label><label><input type="radio" name="q3_4" value="2" required>2</label><label><input type="radio" name="q3_4" value="3" required>3</label><label><input type="radio" name="q3_4" value="4" required>4</label><label><input type="radio" name="q3_4" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 5 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1veioU5K4e5bsDGH8gXVLMxVkr_gAW5AH" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=1Y3-lytLaqcpk2eaipWRlsMDgNAZE1ZR0" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_5" value="A" required> A</label>
+                <label><input type="radio" name="q1_5" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_5" value="1" required>1</label><label><input type="radio" name="q2_5" value="2" required>2</label><label><input type="radio" name="q2_5" value="3" required>3</label><label><input type="radio" name="q2_5" value="4" required>4</label><label><input type="radio" name="q2_5" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_5" value="1" required>1</label><label><input type="radio" name="q3_5" value="2" required>2</label><label><input type="radio" name="q3_5" value="3" required>3</label><label><input type="radio" name="q3_5" value="4" required>4</label><label><input type="radio" name="q3_5" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 6 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1XkonbvE9MD5DmK_pacl4mLOJTarDHeEB" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=19mCUm68QEuY2uw7YB5q9LCqjSCbrAunA" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_6" value="A" required> A</label>
+                <label><input type="radio" name="q1_6" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_6" value="1" required>1</label><label><input type="radio" name="q2_6" value="2" required>2</label><label><input type="radio" name="q2_6" value="3" required>3</label><label><input type="radio" name="q2_6" value="4" required>4</label><label><input type="radio" name="q2_6" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_6" value="1" required>1</label><label><input type="radio" name="q3_6" value="2" required>2</label><label><input type="radio" name="q3_6" value="3" required>3</label><label><input type="radio" name="q3_6" value="4" required>4</label><label><input type="radio" name="q3_6" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 7 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1J7Gv6aj5wHt8GBrnnWA8UCNClFsQLrdd" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=1-NYy8p3iSLOZin2PIuzsHdRUs-sFTfdl" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_7" value="A" required> A</label>
+                <label><input type="radio" name="q1_7" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_7" value="1" required>1</label><label><input type="radio" name="q2_7" value="2" required>2</label><label><input type="radio" name="q2_7" value="3" required>3</label><label><input type="radio" name="q2_7" value="4" required>4</label><label><input type="radio" name="q2_7" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_7" value="1" required>1</label><label><input type="radio" name="q3_7" value="2" required>2</label><label><input type="radio" name="q3_7" value="3" required>3</label><label><input type="radio" name="q3_7" value="4" required>4</label><label><input type="radio" name="q3_7" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 8 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1AW6q8UPx7lG_Ods44S1MVAs_J7KUnRvl" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=1nnAXAhG5iwPSpVHy-1mJ3oRumiOn7KV9" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_8" value="A" required> A</label>
+                <label><input type="radio" name="q1_8" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_8" value="1" required>1</label><label><input type="radio" name="q2_8" value="2" required>2</label><label><input type="radio" name="q2_8" value="3" required>3</label><label><input type="radio" name="q2_8" value="4" required>4</label><label><input type="radio" name="q2_8" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_8" value="1" required>1</label><label><input type="radio" name="q3_8" value="2" required>2</label><label><input type="radio" name="q3_8" value="3" required>3</label><label><input type="radio" name="q3_8" value="4" required>4</label><label><input type="radio" name="q3_8" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 9 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1rM35nojzD_P6c9brf2oAcqKF7fQxozLE" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=17ZaWMN5gMN-exSpX3-pZH000bKMmV2Q0" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_9" value="A" required> A</label>
+                <label><input type="radio" name="q1_9" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_9" value="1" required>1</label><label><input type="radio" name="q2_9" value="2" required>2</label><label><input type="radio" name="q2_9" value="3" required>3</label><label><input type="radio" name="q2_9" value="4" required>4</label><label><input type="radio" name="q2_9" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_9" value="1" required>1</label><label><input type="radio" name="q3_9" value="2" required>2</label><label><input type="radio" name="q3_9" value="3" required>3</label><label><input type="radio" name="q3_9" value="4" required>4</label><label><input type="radio" name="q3_9" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 10 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1rd526b7G9UWo6X5zPPBJHVc-z_FcrNly" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=1mimUwthWbWc3VwNhj381T57YFSsZjg1x" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_10" value="A" required> A</label>
+                <label><input type="radio" name="q1_10" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_10" value="1" required>1</label><label><input type="radio" name="q2_10" value="2" required>2</label><label><input type="radio" name="q2_10" value="3" required>3</label><label><input type="radio" name="q2_10" value="4" required>4</label><label><input type="radio" name="q2_10" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_10" value="1" required>1</label><label><input type="radio" name="q3_10" value="2" required>2</label><label><input type="radio" name="q3_10" value="3" required>3</label><label><input type="radio" name="q3_10" value="4" required>4</label><label><input type="radio" name="q3_10" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 11 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1o5VfqJeyAdeyHt9xQnmDXyQtkl8TNYKW" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=151ILFmYQ-jySda0dWnFEd9MyXYfegMHs" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_11" value="A" required> A</label>
+                <label><input type="radio" name="q1_11" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_11" value="1" required>1</label><label><input type="radio" name="q2_11" value="2" required>2</label><label><input type="radio" name="q2_11" value="3" required>3</label><label><input type="radio" name="q2_11" value="4" required>4</label><label><input type="radio" name="q2_11" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_11" value="1" required>1</label><label><input type="radio" name="q3_11" value="2" required>2</label><label><input type="radio" name="q3_11" value="3" required>3</label><label><input type="radio" name="q3_11" value="4" required>4</label><label><input type="radio" name="q3_11" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 12 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1j3fwsqpAyLsBDGP7IeMJWEDyPzGkdNBL" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=1PPI-9Fjc1F0blob7uguaEkJSsv-9LcBS" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_12" value="A" required> A</label>
+                <label><input type="radio" name="q1_12" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_12" value="1" required>1</label><label><input type="radio" name="q2_12" value="2" required>2</label><label><input type="radio" name="q2_12" value="3" required>3</label><label><input type="radio" name="q2_12" value="4" required>4</label><label><input type="radio" name="q2_12" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_12" value="1" required>1</label><label><input type="radio" name="q3_12" value="2" required>2</label><label><input type="radio" name="q3_12" value="3" required>3</label><label><input type="radio" name="q3_12" value="4" required>4</label><label><input type="radio" name="q3_12" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 13 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=18h0YzNDuI_b9_MXBfadbmsQolKQPchZ-" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=1saNdxtPpXq2fziRuSbzXq_i6zjqnY2FM" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_13" value="A" required> A</label>
+                <label><input type="radio" name="q1_13" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_13" value="1" required>1</label><label><input type="radio" name="q2_13" value="2" required>2</label><label><input type="radio" name="q2_13" value="3" required>3</label><label><input type="radio" name="q2_13" value="4" required>4</label><label><input type="radio" name="q2_13" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_13" value="1" required>1</label><label><input type="radio" name="q3_13" value="2" required>2</label><label><input type="radio" name="q3_13" value="3" required>3</label><label><input type="radio" name="q3_13" value="4" required>4</label><label><input type="radio" name="q3_13" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 14 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1iqNkstoDfxAWsgSIDHK-vbVJEkAtYLHO" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=1yfqIzrcO77laF4KJSrWZH5urDEUZqjO4" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_14" value="A" required> A</label>
+                <label><input type="radio" name="q1_14" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_14" value="1" required>1</label><label><input type="radio" name="q2_14" value="2" required>2</label><label><input type="radio" name="q2_14" value="3" required>3</label><label><input type="radio" name="q2_14" value="4" required>4</label><label><input type="radio" name="q2_14" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_14" value="1" required>1</label><label><input type="radio" name="q3_14" value="2" required>2</label><label><input type="radio" name="q3_14" value="3" required>3</label><label><input type="radio" name="q3_14" value="4" required>4</label><label><input type="radio" name="q3_14" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 15 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1CNlfY52crW3M_fCEIobJAP5Q0az7c6qb" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=1AkzD5sajROIwtcjSOAbmLBgTU5sa6iLf" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_15" value="A" required> A</label>
+                <label><input type="radio" name="q1_15" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_15" value="1" required>1</label><label><input type="radio" name="q2_15" value="2" required>2</label><label><input type="radio" name="q2_15" value="3" required>3</label><label><input type="radio" name="q2_15" value="4" required>4</label><label><input type="radio" name="q2_15" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_15" value="1" required>1</label><label><input type="radio" name="q3_15" value="2" required>2</label><label><input type="radio" name="q3_15" value="3" required>3</label><label><input type="radio" name="q3_15" value="4" required>4</label><label><input type="radio" name="q3_15" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 16 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1C79npLsE1x3znc1CBZf0E53I6NndFHzJ" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=1yIqRo-Yopwv9XdwvX6TrY0OdJZG8EJmL" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_16" value="A" required> A</label>
+                <label><input type="radio" name="q1_16" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_16" value="1" required>1</label><label><input type="radio" name="q2_16" value="2" required>2</label><label><input type="radio" name="q2_16" value="3" required>3</label><label><input type="radio" name="q2_16" value="4" required>4</label><label><input type="radio" name="q2_16" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_16" value="1" required>1</label><label><input type="radio" name="q3_16" value="2" required>2</label><label><input type="radio" name="q3_16" value="3" required>3</label><label><input type="radio" name="q3_16" value="4" required>4</label><label><input type="radio" name="q3_16" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 17 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1XWMMnce4gxjACQ2hV1P30a9dRO7Oz2LV" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=1dNag0TqtXs7NTT1TvKLzMp8uZ475yprM" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_17" value="A" required> A</label>
+                <label><input type="radio" name="q1_17" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_17" value="1" required>1</label><label><input type="radio" name="q2_17" value="2" required>2</label><label><input type="radio" name="q2_17" value="3" required>3</label><label><input type="radio" name="q2_17" value="4" required>4</label><label><input type="radio" name="q2_17" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_17" value="1" required>1</label><label><input type="radio" name="q3_17" value="2" required>2</label><label><input type="radio" name="q3_17" value="3" required>3</label><label><input type="radio" name="q3_17" value="4" required>4</label><label><input type="radio" name="q3_17" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 18 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1Pn5UG5gtk1Nd0ilCy2Et4LnoZ194_Q0F" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=1yMVHLfk5OlcREz8gCkvcjOJTRwWcATW-" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_18" value="A" required> A</label>
+                <label><input type="radio" name="q1_18" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_18" value="1" required>1</label><label><input type="radio" name="q2_18" value="2" required>2</label><label><input type="radio" name="q2_18" value="3" required>3</label><label><input type="radio" name="q2_18" value="4" required>4</label><label><input type="radio" name="q2_18" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_18" value="1" required>1</label><label><input type="radio" name="q3_18" value="2" required>2</label><label><input type="radio" name="q3_18" value="3" required>3</label><label><input type="radio" name="q3_18" value="4" required>4</label><label><input type="radio" name="q3_18" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 19 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1v7oP2RLEMLmTVfU7KJYPFuPWFp-eqtID" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=121SpKxXehs58ojGD4ZuhV_y-NnwsH7QO" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_19" value="A" required> A</label>
+                <label><input type="radio" name="q1_19" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_19" value="1" required>1</label><label><input type="radio" name="q2_19" value="2" required>2</label><label><input type="radio" name="q2_19" value="3" required>3</label><label><input type="radio" name="q2_19" value="4" required>4</label><label><input type="radio" name="q2_19" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_19" value="1" required>1</label><label><input type="radio" name="q3_19" value="2" required>2</label><label><input type="radio" name="q3_19" value="3" required>3</label><label><input type="radio" name="q3_19" value="4" required>4</label><label><input type="radio" name="q3_19" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 20 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1QYcKR32BfdClL3Kiu7CBIIfOsZqKNR6B" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=1QfB_5_DHRIowgsMuo98Kxr176Ak_WDvZ" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_20" value="A" required> A</label>
+                <label><input type="radio" name="q1_20" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_20" value="1" required>1</label><label><input type="radio" name="q2_20" value="2" required>2</label><label><input type="radio" name="q2_20" value="3" required>3</label><label><input type="radio" name="q2_20" value="4" required>4</label><label><input type="radio" name="q2_20" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_20" value="1" required>1</label><label><input type="radio" name="q3_20" value="2" required>2</label><label><input type="radio" name="q3_20" value="3" required>3</label><label><input type="radio" name="q3_20" value="4" required>4</label><label><input type="radio" name="q3_20" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 21 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1rqbWX4Ag83pP74P6Pb0ps6_k2cCjoaXG" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=1le4YM7G20lw3n6q4lLo2yDRvjuZeT7WR" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_21" value="A" required> A</label>
+                <label><input type="radio" name="q1_21" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_21" value="1" required>1</label><label><input type="radio" name="q2_21" value="2" required>2</label><label><input type="radio" name="q2_21" value="3" required>3</label><label><input type="radio" name="q2_21" value="4" required>4</label><label><input type="radio" name="q2_21" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_21" value="1" required>1</label><label><input type="radio" name="q3_21" value="2" required>2</label><label><input type="radio" name="q3_21" value="3" required>3</label><label><input type="radio" name="q3_21" value="4" required>4</label><label><input type="radio" name="q3_21" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 22 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1UoHorolv2jXu8Pqz7ZFy6yDFO3B6C_yQ" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=1sxDa9eQLV23VD4LT_8obA5VV8MaBZcbu" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_22" value="A" required> A</label>
+                <label><input type="radio" name="q1_22" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_22" value="1" required>1</label><label><input type="radio" name="q2_22" value="2" required>2</label><label><input type="radio" name="q2_22" value="3" required>3</label><label><input type="radio" name="q2_22" value="4" required>4</label><label><input type="radio" name="q2_22" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_22" value="1" required>1</label><label><input type="radio" name="q3_22" value="2" required>2</label><label><input type="radio" name="q3_22" value="3" required>3</label><label><input type="radio" name="q3_22" value="4" required>4</label><label><input type="radio" name="q3_22" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 23 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1I-5V22d4YZXmuf--oO9Hkeaz6WQVmyNh" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=14tYZTt7ZU5HZlFzrVPbhGvjPwG7CXUzT" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_23" value="A" required> A</label>
+                <label><input type="radio" name="q1_23" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_23" value="1" required>1</label><label><input type="radio" name="q2_23" value="2" required>2</label><label><input type="radio" name="q2_23" value="3" required>3</label><label><input type="radio" name="q2_23" value="4" required>4</label><label><input type="radio" name="q2_23" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_23" value="1" required>1</label><label><input type="radio" name="q3_23" value="2" required>2</label><label><input type="radio" name="q3_23" value="3" required>3</label><label><input type="radio" name="q3_23" value="4" required>4</label><label><input type="radio" name="q3_23" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 24 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=1eqzfh2QajI_5XmTCUl2lheRZjZ-vzG9R" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=1dZcnP7Vave9pwIF8TYDJYzZ6LqAXjR6n" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_24" value="A" required> A</label>
+                <label><input type="radio" name="q1_24" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_24" value="1" required>1</label><label><input type="radio" name="q2_24" value="2" required>2</label><label><input type="radio" name="q2_24" value="3" required>3</label><label><input type="radio" name="q2_24" value="4" required>4</label><label><input type="radio" name="q2_24" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_24" value="1" required>1</label><label><input type="radio" name="q3_24" value="2" required>2</label><label><input type="radio" name="q3_24" value="3" required>3</label><label><input type="radio" name="q3_24" value="4" required>4</label><label><input type="radio" name="q3_24" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pair-card">
+          <div class="pair-header">사진 쌍 25 / 25</div>
+          <div class="photos">
+            <div class="photo-box"><span class="label">A</span><img src="https://drive.google.com/uc?export=view&id=15B8OOjSTSWLxGB1vyW-fRfHBAHDUl6hZ" alt="A"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="https://drive.google.com/uc?export=view&id=13R3rWDcqeaQHq3dLjrrvnKA3LXSB2Nbj" alt="B"/></div>
+          </div>
+          <div class="questions">
+            <div class="question">
+              <p>Q1. 위험으로부터 더 안전하다고 느껴지는 곳은 어디인가요?</p>
+              <div class="options">
+                <label><input type="radio" name="q1_25" value="A" required> A</label>
+                <label><input type="radio" name="q1_25" value="B"> B</label>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q2. A 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q2_25" value="1" required>1</label><label><input type="radio" name="q2_25" value="2" required>2</label><label><input type="radio" name="q2_25" value="3" required>3</label><label><input type="radio" name="q2_25" value="4" required>4</label><label><input type="radio" name="q2_25" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+            <div class="question">
+              <p>Q3. B 사진은 어느 정도 안전한가요?</p>
+              <div class="scale">
+                <span>매우 위험</span>
+                <label><input type="radio" name="q3_25" value="1" required>1</label><label><input type="radio" name="q3_25" value="2" required>2</label><label><input type="radio" name="q3_25" value="3" required>3</label><label><input type="radio" name="q3_25" value="4" required>4</label><label><input type="radio" name="q3_25" value="5" required>5</label>
+                <span>매우 안전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+<button type="submit" class="submit-btn">제출하기</button>
+</form>
+<script>
+document.getElementById('survey-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('제출이 완료됐습니다. 감사합니다!');
+});
+</script>
+</body>
+</html>
