@@ -27,6 +27,7 @@
   .scale label { display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: pointer; font-size: 14px; }
   .submit-btn { display: block; width: 100%; padding: 16px; background: #2563eb; color: #fff; border: none; border-radius: 10px; font-size: 16px; cursor: pointer; margin-top: 20px; }
   .submit-btn:hover { background: #1d4ed8; }
+  .submit-btn:disabled { background: #555; cursor: wait; }
   @media (max-width: 600px) {
     .photos { flex-direction: column; }
     .options { flex-direction: column; }
@@ -42,11 +43,11 @@
 </div>
 <form id="survey-form">
 
-        <div class="pair-card">
+        <div class="pair-card" data-pair="1" data-a="217" data-b="172">
           <div class="pair-header">사진 쌍 1 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/139.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/474.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/217.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/172.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -75,11 +76,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="2" data-a="339" data-b="183">
           <div class="pair-header">사진 쌍 2 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/340.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/26.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/339.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/183.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -108,11 +109,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="3" data-a="222" data-b="64">
           <div class="pair-header">사진 쌍 3 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/451.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/125.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/222.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/64.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -141,11 +142,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="4" data-a="166" data-b="12">
           <div class="pair-header">사진 쌍 4 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/281.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/251.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/166.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/12.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -174,11 +175,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="5" data-a="169" data-b="125">
           <div class="pair-header">사진 쌍 5 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/4.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/425.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/169.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/125.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -207,11 +208,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="6" data-a="279" data-b="187">
           <div class="pair-header">사진 쌍 6 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/111.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/131.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/279.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/187.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -240,11 +241,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="7" data-a="192" data-b="480">
           <div class="pair-header">사진 쌍 7 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/402.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/54.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/192.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/480.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -273,11 +274,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="8" data-a="481" data-b="261">
           <div class="pair-header">사진 쌍 8 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/268.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/241.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/481.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/261.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -306,11 +307,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="9" data-a="224" data-b="426">
           <div class="pair-header">사진 쌍 9 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/210.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/324.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/224.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/426.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -339,11 +340,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="10" data-a="302" data-b="150">
           <div class="pair-header">사진 쌍 10 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/220.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/259.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/302.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/150.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -372,11 +373,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="11" data-a="340" data-b="5">
           <div class="pair-header">사진 쌍 11 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/325.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/400.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/340.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/5.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -405,11 +406,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="12" data-a="233" data-b="6">
           <div class="pair-header">사진 쌍 12 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/291.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/349.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/233.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/6.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -438,11 +439,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="13" data-a="126" data-b="253">
           <div class="pair-header">사진 쌍 13 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/397.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/467.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/126.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/253.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -471,11 +472,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="14" data-a="87" data-b="366">
           <div class="pair-header">사진 쌍 14 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/463.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/21.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/87.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/366.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -504,11 +505,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="15" data-a="386" data-b="167">
           <div class="pair-header">사진 쌍 15 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/222.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/75.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/386.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/167.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -537,11 +538,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="16" data-a="8" data-b="111">
           <div class="pair-header">사진 쌍 16 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/155.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/240.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/8.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/111.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -570,11 +571,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="17" data-a="442" data-b="11">
           <div class="pair-header">사진 쌍 17 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/485.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/495.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/442.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/11.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -603,11 +604,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="18" data-a="497" data-b="477">
           <div class="pair-header">사진 쌍 18 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/327.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/33.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/497.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/477.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -636,11 +637,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="19" data-a="368" data-b="153">
           <div class="pair-header">사진 쌍 19 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/466.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/89.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/368.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/153.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -669,11 +670,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="20" data-a="308" data-b="114">
           <div class="pair-header">사진 쌍 20 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/329.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/289.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/308.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/114.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -702,11 +703,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="21" data-a="363" data-b="156">
           <div class="pair-header">사진 쌍 21 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/447.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/255.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/363.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/156.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -735,11 +736,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="22" data-a="95" data-b="293">
           <div class="pair-header">사진 쌍 22 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/174.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/52.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/95.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/293.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -768,11 +769,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="23" data-a="338" data-b="204">
           <div class="pair-header">사진 쌍 23 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/191.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/179.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/338.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/204.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -801,11 +802,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="24" data-a="190" data-b="36">
           <div class="pair-header">사진 쌍 24 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/182.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/497.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/190.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/36.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -834,11 +835,11 @@
           </div>
         </div>
         
-        <div class="pair-card">
+        <div class="pair-card" data-pair="25" data-a="10" data-b="401">
           <div class="pair-header">사진 쌍 25 / 25</div>
           <div class="photos">
-            <div class="photo-box"><span class="label">A</span><img src="images/356.jpg" alt="A" loading="lazy"/></div>
-            <div class="photo-box"><span class="label">B</span><img src="images/441.jpg" alt="B" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">A</span><img src="images/10.jpg" alt="A" loading="lazy"/></div>
+            <div class="photo-box"><span class="label">B</span><img src="images/401.jpg" alt="B" loading="lazy"/></div>
           </div>
           <div class="questions">
             <div class="question">
@@ -867,12 +868,42 @@
           </div>
         </div>
         
-<button type="submit" class="submit-btn">제출하기</button>
+<button type="submit" class="submit-btn" id="submit-btn">제출하기</button>
 </form>
 <script>
-document.getElementById('survey-form').addEventListener('submit', function(e) {
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwMxP-4HJuJbEd_XdjjXUIXRwHMcYt6CHIkRpDR1QNWI42bqj-kGFrAWpbvccsmtCk1/exec";
+const SET_NUMBER = 3;
+
+document.getElementById('survey-form').addEventListener('submit', async function(e) {
   e.preventDefault();
-  alert('제출이 완료됐습니다. 감사합니다!');
+  const btn = document.getElementById('submit-btn');
+  btn.disabled = true;
+  btn.textContent = '제출 중...';
+
+  const data = { set_number: SET_NUMBER };
+  
+  document.querySelectorAll('.pair-card').forEach(card => {
+    const pairNum = card.dataset.pair;
+    data[`pair_${pairNum}_a`] = card.dataset.a;
+    data[`pair_${pairNum}_b`] = card.dataset.b;
+    data[`q1_${pairNum}`] = document.querySelector(`input[name="q1_${pairNum}"]:checked`)?.value || '';
+    data[`q2_${pairNum}`] = document.querySelector(`input[name="q2_${pairNum}"]:checked`)?.value || '';
+    data[`q3_${pairNum}`] = document.querySelector(`input[name="q3_${pairNum}"]:checked`)?.value || '';
+  });
+
+  try {
+    await fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: JSON.stringify(data)
+    });
+    alert('제출이 완료됐습니다. 감사합니다!');
+    btn.textContent = '제출 완료';
+  } catch (err) {
+    alert('제출 실패. 다시 시도해주세요.');
+    btn.disabled = false;
+    btn.textContent = '제출하기';
+  }
 });
 </script>
 </body>
