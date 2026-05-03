@@ -1163,6 +1163,7 @@
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwMxP-4HJuJbEd_XdjjXUIXRwHMcYt6CHIkRpDR1QNWI42bqj-kGFrAWpbvccsmtCk1/exec";
 const SET_NUM = 10;
 const TOTAL_PAIRS = 25;
+const PAIRS = [{a:20,b:97},{a:250,b:17},{a:49,b:324},{a:59,b:128},{a:103,b:176},{a:477,b:201},{a:470,b:37},{a:498,b:455},{a:151,b:269},{a:439,b:453},{a:458,b:469},{a:147,b:261},{a:353,b:220},{a:74,b:434},{a:318,b:216},{a:184,b:102},{a:210,b:426},{a:247,b:329},{a:157,b:225},{a:454,b:39},{a:82,b:378},{a:443,b:231},{a:373,b:463},{a:485,b:363},{a:55,b:397}];
 
 function updateProgress() {
   const inputs = document.querySelectorAll('input[type="radio"]:checked');
@@ -1181,8 +1182,8 @@ document.getElementById('surveyForm').addEventListener('submit', async (e) => {
   btn.textContent = '제출 중...';
   
   const formData = new FormData(e.target);
-  const data = { set: SET_NUM, responses: [] };
   
+  // 검증
   for (let i = 1; i <= TOTAL_PAIRS; i++) {
     const q1 = formData.get(`q${i}_choice`);
     const q2 = formData.get(`q${i}_a`);
@@ -1193,14 +1194,26 @@ document.getElementById('surveyForm').addEventListener('submit', async (e) => {
       btn.textContent = '제출하기';
       return;
     }
-    data.responses.push({ pair: i, choice: q1, a_score: q2, b_score: q3 });
+  }
+  
+  // Apps Script가 기대하는 키 이름으로 데이터 구성
+  const data = { set_number: SET_NUM };
+  for (let i = 1; i <= TOTAL_PAIRS; i++) {
+    const pairInfo = PAIRS[i - 1];
+    data[`pair_${i}_a`] = pairInfo.a;
+    data[`pair_${i}_b`] = pairInfo.b;
+    data[`q1_${i}`] = formData.get(`q${i}_choice`);  // A or B
+    data[`q2_${i}`] = formData.get(`q${i}_a`);       // A 점수
+    data[`q3_${i}`] = formData.get(`q${i}_b`);       // B 점수
   }
   
   try {
+    // 핵심: Content-Type을 text/plain으로 보내면 CORS preflight 안 일어남
+    // 그리고 Apps Script는 e.postData.contents에서 본문 읽을 수 있음
     await fetch(APPS_SCRIPT_URL, {
       method: 'POST',
       mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
       body: JSON.stringify(data)
     });
     document.getElementById('surveyForm').style.display = 'none';
