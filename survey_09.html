@@ -13,7 +13,7 @@
     color: #333;
   }
   .container {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
     background: white;
     padding: 30px;
@@ -64,13 +64,17 @@
   }
   .image-box {
     text-align: center;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 8px;
+    border: 2px solid #ddd;
   }
   .image-box img {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 2px solid #ddd;
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 4px;
+    display: block;
   }
   .image-label {
     font-weight: bold;
@@ -102,9 +106,6 @@
   }
   .options label:hover { background: #d5dbdb; }
   .options input[type="radio"] { display: none; }
-  .options input[type="radio"]:checked + span {
-    font-weight: bold;
-  }
   .options label:has(input:checked) {
     background: #3498db;
     color: white;
@@ -133,7 +134,7 @@
     font-weight: bold;
   }
   @media (max-width: 600px) {
-    .image-box img { height: 150px; }
+    .image-box img { max-height: 200px; }
     .options label { font-size: 12px; padding: 8px; }
   }
 </style>
@@ -153,11 +154,11 @@
       <div class="pair-num">1 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/244.jpg" alt="A">
+          <img src="images/43.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/29.jpg" alt="B">
+          <img src="images/122.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -193,11 +194,11 @@
       <div class="pair-num">2 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/192.jpg" alt="A">
+          <img src="images/18.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/130.jpg" alt="B">
+          <img src="images/75.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -233,11 +234,11 @@
       <div class="pair-num">3 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/148.jpg" alt="A">
+          <img src="images/58.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/46.jpg" alt="B">
+          <img src="images/191.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -273,11 +274,11 @@
       <div class="pair-num">4 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/152.jpg" alt="A">
+          <img src="images/17.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/126.jpg" alt="B">
+          <img src="images/154.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -313,11 +314,11 @@
       <div class="pair-num">5 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/145.jpg" alt="A">
+          <img src="images/19.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/210.jpg" alt="B">
+          <img src="images/106.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -353,11 +354,11 @@
       <div class="pair-num">6 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/100.jpg" alt="A">
+          <img src="images/11.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/216.jpg" alt="B">
+          <img src="images/149.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -393,11 +394,11 @@
       <div class="pair-num">7 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/10.jpg" alt="A">
+          <img src="images/217.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/67.jpg" alt="B">
+          <img src="images/79.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -433,11 +434,11 @@
       <div class="pair-num">8 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/122.jpg" alt="A">
+          <img src="images/128.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/85.jpg" alt="B">
+          <img src="images/234.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -473,11 +474,11 @@
       <div class="pair-num">9 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/227.jpg" alt="A">
+          <img src="images/43.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/177.jpg" alt="B">
+          <img src="images/82.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -513,11 +514,11 @@
       <div class="pair-num">10 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/59.jpg" alt="A">
+          <img src="images/124.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/145.jpg" alt="B">
+          <img src="images/245.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -553,11 +554,11 @@
       <div class="pair-num">11 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/206.jpg" alt="A">
+          <img src="images/32.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/49.jpg" alt="B">
+          <img src="images/218.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -593,11 +594,11 @@
       <div class="pair-num">12 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/71.jpg" alt="A">
+          <img src="images/219.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/52.jpg" alt="B">
+          <img src="images/119.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -633,11 +634,11 @@
       <div class="pair-num">13 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/170.jpg" alt="A">
+          <img src="images/11.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/197.jpg" alt="B">
+          <img src="images/8.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -673,11 +674,11 @@
       <div class="pair-num">14 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/49.jpg" alt="A">
+          <img src="images/166.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/36.jpg" alt="B">
+          <img src="images/204.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -713,11 +714,11 @@
       <div class="pair-num">15 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/219.jpg" alt="A">
+          <img src="images/49.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/87.jpg" alt="B">
+          <img src="images/13.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -753,11 +754,11 @@
       <div class="pair-num">16 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/45.jpg" alt="A">
+          <img src="images/178.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/218.jpg" alt="B">
+          <img src="images/19.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -793,11 +794,11 @@
       <div class="pair-num">17 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/83.jpg" alt="A">
+          <img src="images/215.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/118.jpg" alt="B">
+          <img src="images/67.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -833,11 +834,11 @@
       <div class="pair-num">18 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/164.jpg" alt="A">
+          <img src="images/170.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/139.jpg" alt="B">
+          <img src="images/215.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -873,11 +874,11 @@
       <div class="pair-num">19 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/12.jpg" alt="A">
+          <img src="images/125.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/54.jpg" alt="B">
+          <img src="images/217.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -913,11 +914,11 @@
       <div class="pair-num">20 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/110.jpg" alt="A">
+          <img src="images/151.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/43.jpg" alt="B">
+          <img src="images/175.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -953,11 +954,11 @@
       <div class="pair-num">21 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/201.jpg" alt="A">
+          <img src="images/211.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/37.jpg" alt="B">
+          <img src="images/70.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -993,11 +994,11 @@
       <div class="pair-num">22 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/27.jpg" alt="A">
+          <img src="images/208.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/55.jpg" alt="B">
+          <img src="images/48.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -1033,11 +1034,11 @@
       <div class="pair-num">23 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/58.jpg" alt="A">
+          <img src="images/239.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/96.jpg" alt="B">
+          <img src="images/74.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -1073,11 +1074,11 @@
       <div class="pair-num">24 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/74.jpg" alt="A">
+          <img src="images/141.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/202.jpg" alt="B">
+          <img src="images/60.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -1113,11 +1114,11 @@
       <div class="pair-num">25 / 25</div>
       <div class="images">
         <div class="image-box">
-          <img src="images/117.jpg" alt="A">
+          <img src="images/52.jpg" alt="A" loading="lazy">
           <div class="image-label">A</div>
         </div>
         <div class="image-box">
-          <img src="images/26.jpg" alt="B">
+          <img src="images/194.jpg" alt="B" loading="lazy">
           <div class="image-label">B</div>
         </div>
       </div>
@@ -1163,10 +1164,9 @@ const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwMxP-4HJuJbEd_
 const SET_NUM = 9;
 const TOTAL_PAIRS = 25;
 
-// 진행도 업데이트
 function updateProgress() {
   const inputs = document.querySelectorAll('input[type="radio"]:checked');
-  const total = TOTAL_PAIRS * 3; // 쌍당 질문 3개
+  const total = TOTAL_PAIRS * 3;
   const pct = (inputs.length / total) * 100;
   document.getElementById('progressBar').style.width = pct + '%';
 }
@@ -1174,7 +1174,6 @@ document.querySelectorAll('input[type="radio"]').forEach(el => {
   el.addEventListener('change', updateProgress);
 });
 
-// 제출
 document.getElementById('surveyForm').addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = document.getElementById('submitBtn');
